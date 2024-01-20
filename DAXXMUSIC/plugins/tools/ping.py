@@ -70,13 +70,9 @@ async def ping_com(client, message: Message, _):
         ],
         [
             InlineKeyboardButton(
-                text="✦ ɢʀᴏᴜᴘ ✦", url=f"https://t.me/HEROKUFREECC",
+                text="✦ ɢʀᴏᴜᴘ ✦", url=f"https://t.me/The_ChatGroup",
             ),
-            InlineKeyboardButton(
-                text="✧ ᴍᴏʀᴇ ✧", url=f"https://t.me/ALLTYPECC",
-            )
-        ],
-        [
+         
             InlineKeyboardButton(
                 text="❅ ʜᴇʟᴘ ❅", callback_data="settings_back_helper"
             )
