@@ -68,9 +68,9 @@ def welcomepic(pic, user, chatname, id, uname):
 # FUCK you bhosadiwale 
 
 
-@app.on_message(filters.command("wel") & ~filters.private)
+@app.on_message(filters.command("welcome") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**Usage:**\n⦿/wel [on|off]\n➤ᴀᴜʀ ʜᴀᴀɴ ᴋᴀɴɢᴇʀs ᴋᴀʀᴏ ᴀʙ ᴄᴏᴘʏ ʙʜᴏsᴀᴅɪᴡᴀʟᴇ\n➤sᴀʟᴏɴ ᴀᴜʀ ʜᴀᴀɴ sᴛʏʟɪsʜ ғᴏɴᴛ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ɪɴ ᴛʜᴇ ᴛʜᴜᴍʙɴᴀɪʟ.!\ᴀᴜʀ ʜᴀᴀɴ ᴀɢʀ ᴋʜᴜᴅ ᴋɪ ᴋᴀʀɴɪ ʜᴀɪ ᴛᴏ ɢᴀᴀɴᴅ ᴍᴀʀᴀᴏ ʙᴇᴛɪᴄʜᴏᴅ"
+    usage = "**Usage:**\n⦿/welcome➤ [on|off]"
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -133,13 +133,21 @@ async def greet_group(_, member: ChatMemberUpdated):
             photo=welcomeimg,
             caption=f"""
 **Wᴇʟᴄᴏᴍᴇ Tᴏ {member.chat.title}
-➖➖➖➖➖➖➖➖➖➖➖➖
+𝐂ᴏᴍᴘʟᴇᴛᴇᴅ {count} 𝐌ᴇᴍʙᴇʀ𝐬🎉
+➖➖👉𝚈𝙾𝚄𝚁 𝚂𝙴𝙻𝙵👈➖➖
 Nᴀᴍᴇ ✧ {user.mention}
 Iᴅ ✧ {user.id}
-Usᴇʀɴᴀᴍᴇ ✧ @{user.username}
-➖➖➖➖➖➖➖➖➖➖➖➖**
+➖➖𝐅ᴏʟʟᴏᴡ 𝐑ᴜʟᴇꜱ➖➖
+╰➢𝙽𝙾 𝙳𝙸𝚁𝚃𝚈 𝚃𝙰𝙻𝙺𝚂 🔉
+╰➢𝙳𝙾𝙽'𝚃 𝙰𝙱𝚄𝚂𝙴 🚫
+╰➢𝙳𝙾𝙽'𝚃 𝚂𝙿𝙰𝙼 ⚠️
+╰➢𝙳𝙾𝙽'𝚃 𝙳𝙼/𝙿𝙼 💢
+╰➢𝙳𝙾𝙽'𝚃 𝙳𝙸𝚂𝚁𝙴𝚂𝙿𝙴𝙲𝚃 🤬
+╰➢𝙻𝙰𝙽𝙶. 𝙿𝙽𝙱, 𝙷𝙸𝙽 & 𝙴𝙽𝙶 🗣️
+╰➢𝐀ηу 𝐏яσвℓєм 𝐓уρє @admin 🍀
+➖➖𝚃𝚑𝚊𝚗𝚔𝚜 𝙵𝚘𝚛 𝙹𝚒𝚘𝚗➖➖**
 """,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/YumikooBot?startgroup=true")]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"🔐𝚂𝙴𝙲𝚄𝚁𝙴 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿🔐", url=f"https://t.me/MissSardarniBot?startgroup=true")]])
         )
     except Exception as e:
         LOGGER.error(e)
