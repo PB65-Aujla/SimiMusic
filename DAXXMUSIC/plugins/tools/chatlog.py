@@ -68,7 +68,7 @@ async def _greet(_, message):
                 
                 f"🙋𝐖ᴇʟᴄᴏᴍᴇ {message.chat.title}\n"
                 f"➖➖𝚈𝙾𝚄𝚁 𝚂𝙴𝙻𝙵➖➖\n"
-                f"💳 {message.from_user.mention}\n"
+                f"💳 {member.username}\n"
                 f"🪪 {member.id}\n\n"
                 f"➖➖𝐅ᴏʟʟᴏᴡ 𝐑ᴜʟᴇꜱ➖➖\n"
                 f"╰➢𝙽𝙾 𝙳𝙸𝚁𝚃𝚈 𝚃𝙰𝙻𝙺𝚂 🔉\n"
