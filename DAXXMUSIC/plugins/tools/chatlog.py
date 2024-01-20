@@ -65,15 +65,22 @@ async def _greet(_, message):
             count = await app.get_chat_members_count(chat.id)
 
             msg = (
-                f"➖➖➖➖➖➖➖➖➖➖\n"
+                
                 f"🙋𝐖ᴇʟᴄᴏᴍᴇ {message.chat.title}\n"
-                f"_____________________\n"
-                f"💳 {member.username}\n"
-                f"🪪 {member.id}\n"
-                f"_____________________\n"
-                f"👥𝐂ᴏᴍᴘʟᴇᴛᴇᴅ {count} 𝐌ᴇᴍʙᴇʀ𝐬🎉\n"
-                f"➖➖➖➖➖➖➖➖➖➖\n"
+                f"➖➖𝚈𝙾𝚄𝚁 𝚂𝙴𝙻𝙵➖➖\n"
+                f"💳 {message.from_user.mention}\n"
+                f"🪪 {member.id}\n\n"
+                f"➖➖𝐅ᴏʟʟᴏᴡ 𝐑ᴜʟᴇꜱ➖➖\n"
+                f"╰➢𝙽𝙾 𝙳𝙸𝚁𝚃𝚈 𝚃𝙰𝙻𝙺𝚂 🔉\n"
+                f"╰➢𝙳𝙾𝙽'𝚃 𝙰𝙱𝚄𝚂𝙴 🚫\n"
+                f"╰➢𝙳𝙾𝙽'𝚃 𝚂𝙿𝙰𝙼 ⚠️\n"
+                f"╰➢𝙳𝙾𝙽'𝚃 𝙳𝙼/𝙿𝙼 💢\n"
+                f"╰➢𝙳𝙾𝙽'𝚃 𝙳𝙸𝚂𝚁𝙴𝚂𝙿𝙴𝙲𝚃 🤬\n"
+                f"╰➢𝙻𝙰𝙽𝙶. 𝙿𝙽𝙱, 𝙷𝙸𝙽 & 𝙴𝙽𝙶 🗣️\n"
+                f"➖➖𝚃𝚑𝚊𝚗𝚔𝚜 𝙵𝚘𝚛 𝙹𝚒𝚘𝚗➖➖\n"
+                f"🍀 𝐀ηу 𝐏яσвℓєм 𝐓уρє @admin 🍀\n"
+                f"👥𝐂ᴏᴍᴘʟᴇᴛᴇᴅ {count} 𝐌ᴇᴍʙᴇʀ𝐬🎉"
             )
             await app.send_photo(message.chat.id, photo=random.choice(photo), caption=msg, reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(f"ADD ME BABY 💃", url=f"https://t.me/{app.username}?startgroup=true")]
+            [InlineKeyboardButton(f"🔐𝚂𝙴𝙲𝚄𝚁𝙴 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿🔐", url=f"https://t.me/{app.username}?startgroup=true")]
          ]))
