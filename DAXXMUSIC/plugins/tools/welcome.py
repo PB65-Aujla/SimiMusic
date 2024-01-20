@@ -152,8 +152,8 @@ Iᴅ ✧ {user.id}
     except Exception as e:
         LOGGER.error(e)
     try:
-        os.remove(f"downloads/welcome#{user.id}.png")
-        os.remove(f"downloads/pp{user.id}.png")
+        os.remove(f"downloads/welcome#{user.mention}.png")
+        os.remove(f"downloads/pp{user.mention}.png")
     except Exception as e:
         pass
 
@@ -165,9 +165,9 @@ async def bot_wel(_, message):
         if u.id == app.me.id:
             await app.send_message(LOG_CHANNEL_ID, f"""
 **NEW GROUP
-➖➖➖➖➖➖➖➖➖➖➖➖
+➖➖➖➖➖➖➖➖➖➖➖
 NAME: {message.chat.title}
 ID: {message.chat.id}
 USERNAME: @{message.chat.username}
-➖➖➖➖➖➖➖➖➖➖➖➖**
+➖➖➖➖➖➖➖➖➖➖➖**
 """)
