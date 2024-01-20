@@ -51,7 +51,7 @@ def stream_markup_timer(_, chat_id, played, dur):
     elif 80 <= umm < 95:
         bar = "━━━━━━━━☻"
     else:
-        bar = "[☹ 𝚃𝙷𝙴ϟ𝙴𝙽𝙳 ☹](https://t.me/The_ChatGroup)"
+        bar = "📽️ 𝚃𝙷𝙴 ϟ 𝙴𝙽𝙳 📺"
     buttons = [
                 [
             InlineKeyboardButton(
