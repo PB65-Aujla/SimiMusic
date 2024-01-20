@@ -59,11 +59,11 @@ def welcomepic(pic, user, chatname, id, uname):
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=110)
     welcome_font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=60)
-    draw.text((2100, 1420), f'ID: {id}', fill=(12000, 12000, 12000), font=font)
+    draw.text((2100, 1420), f'{user}', fill=(12000, 12000, 12000), font=font)
     pfp_position = (1990, 435)
     background.paste(pfp, pfp_position, pfp)
-    background.save(f"downloads/welcome#{id}.png")
-    return f"downloads/welcome#{id}.png"
+    background.save(f"downloads/welcome#{user}.png")
+    return f"downloads/welcome#{user}.png"
 
 # FUCK you bhosadiwale 
 
@@ -136,7 +136,6 @@ async def greet_group(_, member: ChatMemberUpdated):
 ➖➖👉𝚈𝙾𝚄𝚁 𝚂𝙴𝙻𝙵👈➖➖\n
 Nᴀᴍᴇ ✧ {user.mention}\n
 Iᴅ ✧ {user.id}\n
-
 ➖➖𝐅ᴏʟʟᴏᴡ 𝐑ᴜʟᴇꜱ➖➖\n
 ╰➢𝙽𝙾 𝙳𝙸𝚁𝚃𝚈 𝚃𝙰𝙻𝙺𝚂 🔉\n
 ╰➢𝙳𝙾𝙽'𝚃 𝙰𝙱𝚄𝚂𝙴 🚫\n
@@ -145,7 +144,6 @@ Iᴅ ✧ {user.id}\n
 ╰➢𝙳𝙾𝙽'𝚃 𝙳𝙸𝚂𝚁𝙴𝚂𝙿𝙴𝙲𝚃 🤬\n
 ╰➢𝙻𝙰𝙽𝙶. 𝙿𝙽𝙱, 𝙷𝙸𝙽 & 𝙴𝙽𝙶 🗣️\n
 ╰➢𝐀ηу 𝐏яσвℓєм 𝐓уρє @admin 🍀\n
-
 ➖➖𝚃𝚑𝚊𝚗𝚔𝚜 𝙵𝚘𝚛 𝙹𝚒𝚘𝚗➖➖**
 """,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"🔐𝚂𝙴𝙲𝚄𝚁𝙴 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿🔐", url=f"https://t.me/MissSardarniBot?startgroup=true")]])
