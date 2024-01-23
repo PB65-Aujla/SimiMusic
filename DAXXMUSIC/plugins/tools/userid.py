@@ -1,19 +1,7 @@
 from DAXXMUSIC import app
-from pyrogram import filters
+from pyrogram import Client, filters
+
 from pyrogram.enums import ParseMode
-
-
-@app.on_message(filters.command("me"))
-def ids(_, message):
-    reply = message.reply_to_message
-    if reply:
-        message.reply_text(
-            f"ʏᴏᴜʀ ɪᴅ: {message.from_user.id}\n{reply.from_user.first_name}'s ɪᴅ: {reply.from_user.id}\nᴄʜᴀᴛ ɪᴅ: {message.chat.id}"
-        )
-    else:
-        message.reply(
-            f"ʏᴏᴜʀ ɪᴅ: {message.from_user.id}\nᴄʜᴀᴛ ɪᴅ: {message.chat.id}"
-        )
 
 ####
 
