@@ -59,18 +59,18 @@ def welcomepic(pic, user, chatname, id, uname):
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=110)
     welcome_font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=60)
-    draw.text((2100, 1420), f'{user}', fill=(12000, 12000, 12000), font=font)
+    draw.text((2100, 1420), f'ID: {id}', fill=(12000, 12000, 12000), font=font)
     pfp_position = (1990, 435)
     background.paste(pfp, pfp_position, pfp)
-    background.save(f"downloads/welcome#{user}.png")
-    return f"downloads/welcome#{user}.png"
+    background.save(f"downloads/welcome#{id}.png")
+    return f"downloads/welcome#{id}.png"
 
 # FUCK you bhosadiwale 
 
 
-@app.on_message(filters.command("welcome") & ~filters.private)
+@app.on_message(filters.command("wel") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**Usage:**\n⦿/welcome➤ [on|off]"
+    usage = "**Usage:**\n⦿/wel [on|off]\n➤ᴀᴜʀ ʜᴀᴀɴ ᴋᴀɴɢᴇʀs ᴋᴀʀᴏ ᴀʙ ᴄᴏᴘʏ ʙʜᴏsᴀᴅɪᴡᴀʟᴇ\n➤sᴀʟᴏɴ ᴀᴜʀ ʜᴀᴀɴ sᴛʏʟɪsʜ ғᴏɴᴛ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ɪɴ ᴛʜᴇ ᴛʜᴜᴍʙɴᴀɪʟ.!\ᴀᴜʀ ʜᴀᴀɴ ᴀɢʀ ᴋʜᴜᴅ ᴋɪ ᴋᴀʀɴɪ ʜᴀɪ ᴛᴏ ɢᴀᴀɴᴅ ᴍᴀʀᴀᴏ ʙᴇᴛɪᴄʜᴏᴅ"
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -132,27 +132,20 @@ async def greet_group(_, member: ChatMemberUpdated):
             member.chat.id,
             photo=welcomeimg,
             caption=f"""
-**Wᴇʟᴄᴏᴍᴇ Tᴏ {member.chat.title}\n
-➖➖👉𝚈𝙾𝚄𝚁 𝚂𝙴𝙻𝙵👈➖➖\n
-Nᴀᴍᴇ ✧ {user.mention}\n
-Iᴅ ✧ {user.id}\n
-➖➖𝐅ᴏʟʟᴏᴡ 𝐑ᴜʟᴇꜱ➖➖\n
-╰➢𝙽𝙾 𝙳𝙸𝚁𝚃𝚈 𝚃𝙰𝙻𝙺𝚂 🔉\n
-╰➢𝙳𝙾𝙽'𝚃 𝙰𝙱𝚄𝚂𝙴 🚫\n
-╰➢𝙳𝙾𝙽'𝚃 𝚂𝙿𝙰𝙼 ⚠️\n
-╰➢𝙳𝙾𝙽'𝚃 𝙳𝙼/𝙿𝙼 💢\n
-╰➢𝙳𝙾𝙽'𝚃 𝙳𝙸𝚂𝚁𝙴𝚂𝙿𝙴𝙲𝚃 🤬\n
-╰➢𝙻𝙰𝙽𝙶. 𝙿𝙽𝙱, 𝙷𝙸𝙽 & 𝙴𝙽𝙶 🗣️\n
-╰➢𝐀ηу 𝐏яσвℓєм 𝐓уρє @admin 🍀\n
-➖➖𝚃𝚑𝚊𝚗𝚔𝚜 𝙵𝚘𝚛 𝙹𝚒𝚘𝚗➖➖**
+**Wᴇʟᴄᴏᴍᴇ Tᴏ {member.chat.title}
+➖➖➖➖➖➖➖➖➖➖➖➖
+Nᴀᴍᴇ ✧ {user.mention}
+Iᴅ ✧ {user.id}
+Usᴇʀɴᴀᴍᴇ ✧ @{user.username}
+➖➖➖➖➖➖➖➖➖➖➖➖**
 """,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"🔐𝚂𝙴𝙲𝚄𝚁𝙴 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿🔐", url=f"https://t.me/MissSardarniBot?startgroup=true")]])
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"⦿ ᴀᴅᴅ ᴍᴇ ⦿", url=f"https://t.me/YumikooBot?startgroup=true")]])
         )
     except Exception as e:
         LOGGER.error(e)
     try:
-        os.remove(f"downloads/welcome#{user.mention}.png")
-        os.remove(f"downloads/pp{user.mention}.png")
+        os.remove(f"downloads/welcome#{user.id}.png")
+        os.remove(f"downloads/pp{user.id}.png")
     except Exception as e:
         pass
 
@@ -164,9 +157,9 @@ async def bot_wel(_, message):
         if u.id == app.me.id:
             await app.send_message(LOG_CHANNEL_ID, f"""
 **NEW GROUP
-➖➖➖➖➖➖➖➖➖➖➖
+➖➖➖➖➖➖➖➖➖➖➖➖
 NAME: {message.chat.title}
 ID: {message.chat.id}
 USERNAME: @{message.chat.username}
-➖➖➖➖➖➖➖➖➖➖➖**
+➖➖➖➖➖➖➖➖➖➖➖➖**
 """)
