@@ -16,9 +16,9 @@ OWNER_USERNAME = getenv("OWNER_USERNAME","PB65_Aujla")
 # Get Your bot username
 BOT_USERNAME = getenv("BOT_USERNAME" , "MissSardarniBot")
 # Don't Add style font 
-BOT_NAME = getenv("BOT_NAME" , "Aujla Music")
+BOT_NAME = getenv("BOT_NAME" , "AujlaRoBot")
 #get Your Assistant User name
-ASSUSERNAME = getenv("ASSUSERNAME" , "PB65Music")
+ASSUSERNAME = getenv("ASSUSERNAME" , "AujlaMusic")
 EVALOP = list(map(int, getenv("EVALOP", "6608713615").split()))
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
@@ -39,7 +39,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/PB65-Aujla/JattMusic",
+    "https://github.com/PB65-Aujla/SimiMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
 GIT_TOKEN = getenv(
